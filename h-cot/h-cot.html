@@ -148,28 +148,28 @@
         lucide.createIcons();
     </script>      
     <script>
-        let duabtn = document.querySelector('#duabtn');
         let timebtn = document.querySelector('#timebtn');
+        let duabtn = document.querySelector('#duabtn');
         let obbtn = document.querySelector('#obbtn');
         let qvbtn = document.querySelector('#qvbtn');
         let rqbtn = document.querySelector('#rqbtn');
         let crbtn = document.querySelector('#crbtn');
 
-        let duacontent = document.querySelector('.dua');
         let timecontent = document.querySelector('.time-management');
+        let duacontent = document.querySelector('.dua');
         let obodcontent = document.querySelector('.oboodieat');
         let qurancontent = document.querySelector('.quran-verses');
         let researchcontent = document.querySelector('.research-questions');
         let classreccontent = document.querySelector('.class-recordings');
 
-
+        timebtn.onclick = function(){
+            timecontent.classList.toggle('active');
+        };
+        
         duabtn.onclick = function(){
             duacontent.classList.toggle('active');
         };
 
-        timebtn.onclick = function(){
-            timecontent.classList.toggle('active');
-        };
 
         obbtn.onclick = function(){
             obodcontent.classList.toggle('active');
@@ -183,12 +183,27 @@
             researchcontent.classList.toggle('active');
         }
 
+        let password = "123hadifall2024";
         crbtn.onclick = function(){
-            classreccontent.classList.toggle('active');
+            if (classreccontent.checkVisibility() == true){
+                classreccontent.classList.toggle('active');
+                return;
+            }
+            let passcode = prompt("Enter the password");
+            if (passcode == password){
+                alert("Access granted!")
+                classreccontent.classList.toggle('active');
+            }
+            else{
+                alert("Incorrect password");
+            }
+            return;
+            
         }
 
         
     </script>
+
 
 
 </html>
