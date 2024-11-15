@@ -4,10 +4,15 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+body{
+    margin:0 auto;
+}
+
 .title{
     text-align: center;
     padding: 0.9rem;
 }
+
 .sidebar{
     position: absolute;
     top:10;
@@ -18,7 +23,6 @@
     padding: 0.4rem 0.8rem;
     transition: all 0.5s ease;
 }
-
 
 .sidebar ul li {
     position: relative;

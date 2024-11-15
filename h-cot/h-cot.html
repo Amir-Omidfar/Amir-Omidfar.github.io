@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
     <head>
         <title>H-COT: Hadi Courses On Track</title>
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -61,16 +61,16 @@
 
        <div class="main-content">
         <div class="time-management">
-            <iframe height="1000" width="900" src="https://docs.google.com/document/d/e/2PACX-1vR6tb1tkl8OmEYKv4NTrrhDsIxk6RFtb_4EVMDUAv2WVBXndgbdt2Tj9LiNQVrpX1nHWeJTLzWNJ1wk/pub?embedded=true">loading...</iframe>
+            <iframe height="1000" width="900" src="sections/time_management.html" frameborder="2"></iframe>
         </div>
         <div class="dua">
-            <iframe height="1000" width="900" src="https://docs.google.com/document/d/e/2PACX-1vRZ5PpQKnpMUseLohOFsrEg44Ess8PDkVQ6ppM7f8WGX1wVn6Bo8c28aaoeMP8yBNOEVAdx-opxJoNN/pub?embedded=true">loading...</iframe>
+            <iframe height="1000" width="900" src="sections/dua.html" frameborder="2"></iframe>
         </div>
         <div class="oboodieat">
-            <iframe height="1000" width="900" src="https://docs.google.com/document/d/e/2PACX-1vR6tb1tkl8OmEYKv4NTrrhDsIxk6RFtb_4EVMDUAv2WVBXndgbdt2Tj9LiNQVrpX1nHWeJTLzWNJ1wk/pub?embedded=true">loading...</iframe>
+            <iframe height="1000" width="900" src="sections/oboodieat.html" frameborder="2"></iframe>
         </div>
         <div class="quran-verses">
-            <iframe height="1000" width="900" src="https://docs.google.com/document/d/e/2PACX-1vR5yXi8hQIHNu7CP4ogIKDg9XmEx8PC9AroRbhr7tNWspKLBO7ZYV80EN16ktfwPyaS5e1psbGHa4-H/pub?embedded=true">loading...</iframe>
+            <iframe height="1000" width="900" src="sections/quran_verses.html"></iframe>
         </div>
         <div class="research-questions">
             <iframe height="1000" width="900" src="https://docs.google.com/document/d/e/2PACX-1vT8jW_hjilEt71xVAykp1AX-2nzaswEFRYIRG6Y6WHTRcBE62Ca40gWHhjYNR68vadHD-fO4nksvQ-Y/pub?embedded=true">loading...</iframe>
@@ -161,30 +161,91 @@
         let qurancontent = document.querySelector('.quran-verses');
         let researchcontent = document.querySelector('.research-questions');
         let classreccontent = document.querySelector('.class-recordings');
-
+        var contents_list = [timecontent, duacontent, obodcontent, qurancontent, researchcontent, classreccontent]
         timebtn.onclick = function(){
-            timecontent.classList.toggle('active');
+            main_content = timecontent
+            for(i=0;i<contents_list.length;i++)
+            {
+                content = contents_list[i]
+                if ( (content!=main_content) &&(content.checkVisibility() == true))
+                    {
+                        content.classList.toggle('active');
+                    }
+
+            }
+            main_content.classList.toggle('active');
         };
         
         duabtn.onclick = function(){
-            duacontent.classList.toggle('active');
+            main_content = duacontent
+            for(i=0;i<contents_list.length;i++)
+            {
+                content = contents_list[i]
+                if ( (content!=main_content) &&(content.checkVisibility() == true))
+                    {
+                        content.classList.toggle('active');
+                    }
+
+            }
+            main_content.classList.toggle('active');
         };
 
 
         obbtn.onclick = function(){
-            obodcontent.classList.toggle('active');
+            main_content = obodcontent
+            for(i=0;i<contents_list.length;i++)
+            {
+                content = contents_list[i]
+                if ( (content!=main_content) &&(content.checkVisibility() == true))
+                    {
+                        content.classList.toggle('active');
+                    }
+
+            }
+            main_content.classList.toggle('active');
         }
 
         qvbtn.onclick = function(){
-            qurancontent.classList.toggle('active');
+            main_content = qurancontent
+            for(i=0;i<contents_list.length;i++)
+            {
+                content = contents_list[i]
+                if ( (content!=main_content) &&(content.checkVisibility() == true))
+                    {
+                        content.classList.toggle('active');
+                    }
+
+            }
+            main_content.classList.toggle('active');
         }
 
         rqbtn.onclick = function(){
-            researchcontent.classList.toggle('active');
+            main_content = researchcontent
+            for(i=0;i<contents_list.length;i++)
+            {
+                content = contents_list[i]
+                if ( (content!=main_content) &&(content.checkVisibility() == true))
+                    {
+                        content.classList.toggle('active');
+                    }
+
+            }
+            main_content.classList.toggle('active');
         }
 
         let password = "123hadifall2024";
         crbtn.onclick = function(){
+            main_content = classreccontent
+            for(i=0;i<contents_list.length;i++)
+            {
+                content = contents_list[i]
+                if ( (content!=main_content) &&(content.checkVisibility() == true))
+                    {
+                        content.classList.toggle('active');
+                    }
+
+            }
+            
             if (classreccontent.checkVisibility() == true){
                 classreccontent.classList.toggle('active');
                 return;
@@ -207,21 +268,3 @@
 
 
 </html>
-
-<!--
-
-    side bar —————:
-1. User Info
-2. Course Content:
-    1. Fall 2024
-        1. Time Management
-        2. Dua 
-        3. Oboodieat
-        4. Quranic verses:
-            1. Ayaes related to Dua
-            2. Mahdaviat 
-        5. Research questions:
-            1. Esteghfar
-        6. Class recordings
-
--->
