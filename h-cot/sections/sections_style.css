@@ -22,3 +22,24 @@
 .dua_dar_zendegi_image{
     width: 500px;
 }
+
+.rq_body{
+    line-height: 50px;
+}
+.reason{
+    font-size: 23;
+}
+.aya{
+    font-size: 18;
+}
+.subreason{
+    font-size: 15;
+}
+
+.hadith{
+    font-weight: bold;
+}
+
+.ref{
+    font-size: 10;
+}
