@@ -1,3 +1,10 @@
+
+.dua_related ol{
+    list-style: arabic-indic;
+}
+.esteghfar ol{
+    list-style: arabic-indic;
+}
 .time_management_header{
     text-align: center;
 }
